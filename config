@@ -1,0 +1,5 @@
+RG_NAME=RESOURCE_GROUP_NAME # i.e. plexrg
+AZ_LOCATION= # i.e. eastus2
+VM_NAME= 
+VM_ADMIN_USERNAME=
+VM_SSH_KEY_PATH=/path/to/ssh_key.pub

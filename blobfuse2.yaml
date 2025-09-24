@@ -1,0 +1,37 @@
+
+foreground: true
+allow-other: true
+
+logging:
+  type: syslog
+  level: LOG_INFO
+
+components:
+  - libfuse
+  # - file_cache
+  - block_cache
+  - attr_cache
+  - azstorage
+
+
+# file_cache:
+#   path: /var/cache/blobfuse2/plex
+#   max-size-mb: 8192
+#   timeout-sec: 1800
+#   cleanup-on-start: true
+
+block_cache:
+  path: /var/cache/blobfuse2/plex
+  block-size-mb: 32
+  mem-size-mb: 2048
+  disk-size-mb: 8192
+  disk-timeout-sec: 600
+  cleanup-on-start: true
+
+azstorage:
+  type: block
+  account-name: STORAGE_ACCOUNT_NAME
+  container: CONTAINER_NAME
+  mode: key
+  account-key: STORAGE_ACCOUNT_KEY
+  block-size-mb: 32
